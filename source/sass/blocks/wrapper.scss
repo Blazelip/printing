@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media #{$screen-tablet} {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  @media #{$screen-mobile} {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,27 @@
+// SETTINGS
+
+@import "settings/normalize.scss";
+@import "settings/fonts.scss";
+@import "settings/variables.scss";
+@import "settings/mixins.scss";
+@import "settings/global.scss";
+
+// GLOBAL
+
+@import "blocks/page.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/list.scss";
+@import "blocks/button.scss";
+
+// HEADER
+
+@import "blocks/header.scss";
+
+// MAIN
+
+@import "blocks/about.scss";
+
+// FOOTER
+
+@import "blocks/footer.scss";
