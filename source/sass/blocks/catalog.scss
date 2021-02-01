@@ -1,0 +1,27 @@
+.catalog {
+  background-color: $catalog-bg;
+
+  h2 {
+    @include font-mixin(36px, 51px);
+
+    margin: 0;
+
+    color: $catalog-title;
+
+    @media #{$screen-tablet} {
+      @include font-mixin(32px, 45px);
+    }
+
+    @media #{$screen-mobile} {
+      @include font-mixin(28px, 39px);
+    }
+  }
+}
+
+.catalog__list {
+
+}
+
+.catalog__item {
+
+}

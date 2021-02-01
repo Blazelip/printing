@@ -1,0 +1,47 @@
+.modal {
+  width: 490px;
+
+  font-family: $secondary-font;
+  color: $modal-text;
+
+  background-color: $modal-bg;
+
+  h3 {
+    @include font-mixin(28px, 39px);
+
+    margin: 0;
+
+    font-family: $default-font;
+  }
+
+  p {
+    @include font-mixin(16px, 22px);
+
+    margin: 0;
+  }
+}
+
+.modal__form {
+  input,
+  textarea {
+    padding: 15px 24px;
+
+    background-color: rgba($modal-input-bg, 0.1);
+
+    border: none;
+
+    &::placeholder {
+      @include font-mixin(16px, 22px);
+
+      color: $feedback-text;
+    }
+  }
+
+  span {
+
+  }
+}
+
+.modal__btn {
+
+}

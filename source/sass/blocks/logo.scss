@@ -1,4 +1,37 @@
 .logo {
-  display: inline-block;
-  vertical-align: middle;
+  p {
+    @media #{$screen-mobile} {
+      display: none;
+    }
+  }
+}
+
+.logo__link {
+  img {
+    display: block;
+  }
+}
+
+.logo__title {
+  @include font-mixin(25px, 29px);
+
+  margin: 0;
+
+  font-weight: 700;
+  color: $logo-title;
+
+  &--footer {
+    color: $footer-logo-title;
+  }
+}
+
+.logo__descr {
+  @include font-mixin(12px, 14px);
+
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+
+  color: #788891;
 }

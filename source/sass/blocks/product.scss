@@ -1,0 +1,13 @@
+.product {
+
+}
+
+.product__link {
+  @include font-mixin(20px, 30px);
+
+  color: $product-title;
+
+  h3 {
+    margin: 0;
+  }
+}

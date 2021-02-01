@@ -1,0 +1,103 @@
+.header {
+  min-height: 950px;
+
+  background-color: $header-bg;
+  background-image:
+    url("../img/microchip-desktop@1x.png"),
+    url("../img/background-desktop@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: 705px 515px, cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/microchip-desktop@2x.png"),
+      url("../img/background-desktop@2x.png");
+  }
+
+  @media #{$screen-tablet} {
+    min-height: 873px;
+
+    background-image:
+      url("../img/microchip-tablet@1x.png"),
+      url("../img/background-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/microchip-tablet@2x.png"),
+        url("../img/background-desktop@2x.png");
+    }
+  }
+
+  @media #{$screen-mobile} {
+    min-height: 834px;
+
+    background-image:
+      url("../img/microchip-mobile@1x.png"),
+      url("../img/background-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/microchip-mobile@2x.png"),
+        url("../img/background-desktop@2x.png");
+    }
+  }
+}
+
+.header__top {
+
+}
+
+.header__logo {
+
+}
+
+.header__contacts {
+
+}
+
+.header__button-top {
+  @media #{$screen-tablet} {
+    display: none;
+  }
+}
+
+.header__hero {
+  h1 {
+    @include font-mixin(80px, 94px);
+
+    margin: 0;
+
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $main-title;
+
+    @media #{$screen-tablet} {
+      @include font-mixin(60px, 70px);
+    }
+
+    @media #{$screen-mobile} {
+      @include font-mixin(40px, 47px);
+    }
+  }
+
+  p {
+    @include font-mixin(22px, 34px);
+
+    font-family: $secondary-font;
+    color: $description;
+
+    @media #{$screen-tablet} {
+      @include font-mixin(18px, 28px);
+    }
+
+    @media #{$screen-mobile} {
+      @include font-mixin(16px, 25px);
+    }
+  }
+}
+
+.header__button-hero {
+
+}

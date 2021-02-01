@@ -1,0 +1,68 @@
+.footer {
+
+  h3 {
+    @include font-mixin(15px, 16px);
+
+    margin: 0;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $footer-title;
+  }
+}
+
+.footer__wrapper {
+
+}
+
+.foooter__column-1 {
+
+}
+
+.footer__logo {
+
+}
+
+.footer__socials {
+
+}
+
+.footer__column-2 {
+
+}
+
+.footer__column-3 {
+  @include font-mixin(15px, 25px);
+
+  font-family: $secondary-font;
+  color: rgba($footer-nav, 0.5);
+
+  p {
+    margin: 0;
+  }
+}
+
+.footer__phones {
+
+}
+
+.footer__row-2 {
+  @include font-mixin(13px, 24px);
+
+  font-family: $secondary-font;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba($footer-law, 0.5);
+}
+
+.footer__rights {
+  p {
+    margin: 0;
+  }
+}
+
+.footer__copyright {
+  p {
+    margin: 0;
+  }
+}

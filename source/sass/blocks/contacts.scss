@@ -1,0 +1,19 @@
+.contacts {
+  @include font-mixin(16px, 18px);
+
+  font-family: $secondary-font;
+}
+
+.contacts__item {
+
+}
+
+.contacts__link {
+  color: $header-contacts;
+
+  span {
+    @media #{$screen-tablet} {
+      display: none;
+    }
+  }
+}

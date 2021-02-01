@@ -17,11 +17,22 @@
 // HEADER
 
 @import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/contacts.scss";
 
 // MAIN
 
+@import "blocks/features.scss";
 @import "blocks/about.scss";
+@import "blocks/catalog.scss";
+@import "blocks/product.scss";
+@import "blocks/feedback.scss";
 
 // FOOTER
 
 @import "blocks/footer.scss";
+@import "blocks/nav.scss";
+
+// MODAL
+
+@import "blocks/modal.scss";

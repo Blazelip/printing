@@ -1,0 +1,13 @@
+.nav {
+  @include font-mixin(15px, 25px);
+
+  font-family: $secondary-font;
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+  color: rgba($footer-nav, 0.5);
+}

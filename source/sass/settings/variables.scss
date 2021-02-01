@@ -9,7 +9,58 @@ $screen-mobile: (max-width: $mobile-width-only);
 $screen-tablet: (max-width: $tablet-width-only);
 $screen-only-desktop: (min-width: $desktop-width);
 
+$white: #ffffff;
+$black: #000000;
+$dark-blue: #1b2d37;
+$grey-1: #788891;
+$light-blue: #00b2ff;
+$grey-2: #666666;
+$grey-3: #ebebeb;
+$dark-2: #203c42;
+
+$logo-title: $white;
+$logo-descr: $grey-1;
+$header-bg: $dark-blue;
+$header-contacts: $white;
+$btn-color: $white;
+
+$main-title: $white;
+$description: $white;
+
+$features-title: $light-blue;
+$features-text: $grey-2;
+$features-border: $grey-3;
+$features-left-border: $light-blue;
+$feature-hover-bg: $light-blue;
+$feature-hover-text: $white;
+
+$about-text-color: $grey-2;
+$about-btn-text: $light-blue;
+$about-btn-border: $light-blue;
+$about-btn-bg-hover: $light-blue;
+$about-btn-text-hover: $white;
+
+$catalog-bg: $dark-blue;
+$catalog-title: $white;
+
+$product-title: $white;
+
+$feedback-bg: $light-blue;
+$feedback-text: $white;
+$feedback-input-bg: $white;
+
+$footer-logo-title: $dark-2;
+$footer-title: $dark-blue;
+$footer-nav: $dark-blue;
+$footer-contacts: $dark-blue;
+$footer-law: $dark-blue;
+
+$modal-bg: $light-blue;
+$modal-text: $white;
+$modal-input-bg: $white;
+
 $default-font: "Roboto Condensed", "Verdana", sans-serif;
+$secondary-font: "PT Mono", "Courier New", monospace;
 
 $long-transition: 0.4s;
 $short-transition: 0.2s;

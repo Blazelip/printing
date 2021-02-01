@@ -1,0 +1,47 @@
+.about {
+  color: $about-text-color;
+
+  h2 {
+    @include font-mixin(36px, 51px);
+
+    margin: 0;
+
+    @media #{$screen-tablet} {
+      @include font-mixin(32px, 45px);
+    }
+
+    @media #{$screen-mobile} {
+      @include font-mixin(28px, 39px);
+    }
+  }
+}
+
+.about__text {
+  @include font-mixin(16px, 22px);
+
+  margin: 0;
+
+  &--first {
+
+  }
+
+  &--second {
+
+  }
+}
+
+.about__button {
+  width: 180px;
+
+  color: $about-btn-text;
+  border-color: $about-btn-border;
+
+  @media #{$screen-only-desktop} {
+    &:hover,
+    &:focus {
+      color: $about-btn-text-hover;
+
+      background-color: $about-btn-bg-hover;
+    }
+  }
+}

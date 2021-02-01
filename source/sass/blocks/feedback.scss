@@ -1,0 +1,53 @@
+.feedback {
+  background-color: $feedback-bg;
+
+  font-family: $secondary-font;
+  color: $feedback-text;
+
+  h2 {
+    @include font-mixin(36px, 51px);
+
+    margin: 0;
+
+    font-family: $default-font;
+
+    @media #{$screen-tablet} {
+      @include font-mixin(32px, 45px);
+    }
+
+    @media #{$screen-mobile} {
+      @include font-mixin(28px, 39px);
+    }
+  }
+
+  p {
+    @include font-mixin(16px, 22px);
+
+    margin: 0;
+  }
+}
+
+.feedback__form {
+  input,
+  textarea {
+    padding: 15px 17px;
+
+    background-color: rgba($feedback-input-bg, 0.1);
+
+    border: none;
+
+    &::placeholder {
+      @include font-mixin(16px, 22px);
+
+      color: $feedback-text;
+    }
+  }
+
+  span {
+
+  }
+}
+
+.feedback__btn {
+  font-family: $default-font;
+}

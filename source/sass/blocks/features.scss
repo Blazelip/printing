@@ -1,0 +1,46 @@
+.features {
+
+}
+
+.features__list {
+
+}
+
+.features__item {
+  border: 1px solid $features-border;
+  border-left: 3px solid $features-left-border;
+
+  background-color: $white;
+
+  @media #{$screen-only-desktop} {
+    &:hover {
+      background-color: $feature-hover-bg;
+
+      h3,
+      p {
+        color: $feature-hover-text;
+      }
+    }
+  }
+
+  h3 {
+    @include font-mixin(24px, 34px);
+
+    margin: 0;
+
+    color: $features-title;
+
+    @media #{$screen-mobile} {
+      @include font-mixin(20px, 28px);
+    }
+  }
+
+  p {
+    @include font-mixin(16px, 22px);
+
+    margin: 0;
+
+    font-family: $secondary-font;
+    color: $features-text;
+  }
+}

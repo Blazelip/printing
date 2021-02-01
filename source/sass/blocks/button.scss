@@ -12,16 +12,31 @@
   cursor: pointer;
 
   &--main {
-    @include font-mixin(15px, 140%);
+    @include font-mixin(14px, 16px);
 
-    width: 100%;
-    padding: 15px 28px;
+    padding: 14px 13px;
 
-    color: $common-text;
-    font-weight: 600;
+    color: $btn-color;
+    font-weight: 700;
     text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 
-    background-color: $btn-bacgkround;
-    border-radius: 6px;
+    border: 1px solid $btn-color;
+    border-radius: 5px;
+  }
+}
+
+.button__text-1 {
+  @media #{$screen-mobile} {
+    display: none;
+  }
+}
+
+.button__text-2 {
+  display: none;
+
+  @media #{$screen-mobile} {
+    display: inline;
   }
 }

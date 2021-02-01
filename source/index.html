@@ -15,11 +15,11 @@
     <div class="wrapper">
       <div class="header__top">
         <div class="header__logo logo">
-          <a class="logo__image">
+          <a class="logo__link">
             <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
           </a>
-          <p>Smart Device</p>
-          <p>Умные технологии</p>
+          <p class="logo__title">Smart Device</p>
+          <p class="logo__descr">Умные технологии</p>
         </div>
 
         <ul class="header__contacts contacts list">
@@ -49,9 +49,9 @@
       <section class="header__hero">
         <h1>Печатные платы</h1>
         <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="header__button-hero button--main">
-          <span>Получить бесплатную консультацию</span>
-          <span>Бесплатная консультация</span>
+        <a href="#" class="header__button-hero button button--main">
+          <span class="button__text-1">Получить бесплатную консультацию</span>
+          <span class="button__text-2">Бесплатная консультация</span>
         </a>
       </section>
     </div>
@@ -130,21 +130,48 @@
           <li class="catalog__item">
             <article class="product">
               <a href="#" class="product__link">
-                  Производство печатных плат
+                <h3>Производство печатных плат</h3>
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/producing-mobile@1x.webp 1x, img/producing-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/producing-tablet@1x.webp 1x, img/producing-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/producing-desktop@1x.webp 1x, img/producing-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/producing-mobile@1x.png 1x, img/producing-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/producing-tablet@1x.png 1x, img/producing-tablet@2x.png 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img width="370" height="620" src="img/producing-desktop@1x.png" srcset="img/producing-desktop@2x.png 2x" alt="Производство">
+                </picture>
               </a>
             </article>
           </li>
           <li class="catalog__item">
             <article class="product">
               <a href="#" class="product__link">
-                Монтаж печатных плат
+                <h3>Монтаж печатных плат</h3>
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/setup-mobile@1x.webp 1x, img/setup-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/setup-tablet@1x.webp 1x, img/setup-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/setup-desktop@1x.webp 1x, img/setup-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/setup-mobile@1x.png 1x, img/setup-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/setup-tablet@1x.png 1x, img/setup-tablet@2x.png 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img width="370" height="620" src="img/setup-desktop@1x.png" srcset="img/setup-desktop@2x.png 2x" alt="Производство">
+                </picture>
               </a>
             </article>
           </li>
           <li class="catalog__item">
             <article class="product">
               <a href="#" class="product__link">
-                Комплектующие для светотехники
+                <h3>Комплектующие для светотехники</h3>
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/lights-mobile@1x.webp 1x, img/lights-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/lights-tablet@1x.webp 1x, img/lights-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/lights-desktop@1x.webp 1x, img/lights-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/lights-mobile@1x.png 1x, img/lights-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" srcset="img/lights-tablet@1x.png 1x, img/lights-tablet@2x.png 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img width="370" height="620" src="img/lights-desktop@1x.png" srcset="img/lights-desktop@2x.png 2x" alt="Производство">
+                </picture>
               </a>
             </article>
           </li>
@@ -156,7 +183,7 @@
       <div class="wrapper">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
           <p>
             <label class="visually-hidden" for="customer">Ваше имя</label>
             <input type="text" name="customer" id="customer" placeholder="Имя">
@@ -169,8 +196,11 @@
             <label class="visually-hidden" for="question">Ваш вопрос</label>
             <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
           </p>
-          <button class="form__btn button button--main" type="submit">Задать вопрос</button>
-          <input type="checkbox" name="data-agreement" value="ok">
+          <button class="feedback__btn button button--main" type="submit">Задать вопрос</button>
+          <p>
+            <input type="checkbox" name="data-agreement" id="agreement" value="ok">
+            <label for="agreement">Я согласен на обработку персональных данных</label>
+          </p>
         </form>
       </div>
     </section>
@@ -183,11 +213,11 @@
           <a class="logo__image">
             <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
           </a>
-          <p>Smart Device</p>
-          <p>Умные технологии</p>
+          <p class="logo__title logo__title--footer">Smart Device</p>
+          <p class="logo__descr">Умные технологии</p>
         </div>
 
-        <ul class="footer__socials list">
+        <ul class="footer__socials socials list">
           <li class="socials__item">
             <a href="" class="socials__link" aria-label="Мы в Фейсбуке">
               <svg width="26" height="26">
@@ -251,8 +281,8 @@
 
       <div class="footer__row-2">
         <div class="footer__rights">
-          <p class="footer__rights-1">Все права защищены</p>
-          <p class="footer__rights-2">1999-2018 SD Service Devices</p>
+          <p>Все права защищены</p>
+          <p>1999-2018 SD Service Devices</p>
         </div>
 
         <div class="footer__copyright">
@@ -280,7 +310,10 @@
         <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
       </p>
       <button class="modal__btn button button--main" type="submit">Задать вопрос</button>
-      <input type="checkbox" name="data-agreement" value="ok">
+      <p>
+        <input type="checkbox" name="data-agreement" id="agreement-modal" value="ok">
+        <label for="agreement-modal">Я согласен на обработку персональных данных</label>
+      </p>
     </form>
   </section>
   <!-- <script src="js/main.js"></script> -->
