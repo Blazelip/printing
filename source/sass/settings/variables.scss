@@ -13,6 +13,7 @@ $white: #ffffff;
 $black: #000000;
 $dark-blue: #1b2d37;
 $grey-1: #788891;
+$grey-2: #cdcdcd;
 $light-blue: #00b2ff;
 $grey-2: #666666;
 $grey-3: #ebebeb;
@@ -23,6 +24,7 @@ $logo-descr: $grey-1;
 $header-bg: $dark-blue;
 $header-contacts: $white;
 $btn-color: $white;
+$hero-button-bg: #00b2ff;
 
 $main-title: $white;
 $description: $white;
@@ -33,6 +35,8 @@ $features-border: $grey-3;
 $features-left-border: $light-blue;
 $feature-hover-bg: $light-blue;
 $feature-hover-text: $white;
+$feature-svg-fill: $light-blue;
+$feature-svg-fill-hover: $white;
 
 $about-text-color: $grey-2;
 $about-btn-text: $light-blue;
@@ -44,6 +48,7 @@ $catalog-bg: $dark-blue;
 $catalog-title: $white;
 
 $product-title: $white;
+$product-control: $light-blue;
 
 $feedback-bg: $light-blue;
 $feedback-text: $white;
@@ -52,8 +57,12 @@ $feedback-input-bg: $white;
 $footer-logo-title: $dark-2;
 $footer-title: $dark-blue;
 $footer-nav: $dark-blue;
+$footer-nav-hover: $light-blue;
 $footer-contacts: $dark-blue;
 $footer-law: $dark-blue;
+$footer-phone-hover: $light-blue;
+
+$socials-icon: $grey-2;
 
 $modal-bg: $light-blue;
 $modal-text: $white;

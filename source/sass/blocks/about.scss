@@ -1,10 +1,21 @@
 .about {
+  padding-bottom: 110px;
+
   color: $about-text-color;
+
+  @media #{$screen-tablet} {
+    padding-bottom: 83px;
+  }
+
+  @media #{$screen-mobile} {
+    @include font-mixin(28px, 39px);
+  }
 
   h2 {
     @include font-mixin(36px, 51px);
 
     margin: 0;
+    margin-bottom: 18px;
 
     @media #{$screen-tablet} {
       @include font-mixin(32px, 45px);
@@ -16,22 +27,78 @@
   }
 }
 
+.about__container {
+  position: relative;
+
+  max-width: 1168px;
+  margin: 0 auto;
+  padding-left: 180px;
+
+  @media #{$screen-tablet} {
+    max-width: 800px;
+    padding-left: 185px;
+  }
+
+  @media #{$screen-mobile} {
+    max-width: 500px;
+    padding-left: 0;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -0.5%;
+    top: 0;
+
+    width: 135px;
+    height: 317px;
+
+    background-image: url("../img/2005-desktop@1x.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/2005-desktop@2x.png");
+      background-size: 135px;
+    }
+
+    @media #{$screen-tablet} {
+      width: 180px;
+      height: 361px;
+
+      background-image: url("../img/2005-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/2005-tablet@2x.png");
+        background-size: 180px;
+      }
+    }
+
+    @media #{$screen-mobile} {
+      display: none;
+    }
+  }
+}
+
 .about__text {
   @include font-mixin(16px, 22px);
 
   margin: 0;
 
-  &--first {
+  font-family: $secondary-font;
 
+  &--first {
+    margin-bottom: 18px;
   }
 
   &--second {
-
+    margin-bottom: 38px;
   }
 }
 
 .about__button {
   width: 180px;
+  padding: 14px 50px;
 
   color: $about-btn-text;
   border-color: $about-btn-border;

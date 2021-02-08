@@ -1,16 +1,4 @@
-.nav {
-  @include font-mixin(15px, 25px);
-
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  column-gap: 77px;
-
-  font-family: $secondary-font;
-
-  @media #{$screen-tablet} {
-    display: block;
-  }
-
+.footer-contacts {
   @media #{$screen-mobile} {
     &--nojs {
       display: block;
@@ -24,19 +12,23 @@
       display: block;
     }
   }
+
+  address {
+    font-style: normal;
+
+    @media #{$screen-mobile} {
+      max-width: 200px;
+    }
+  }
 }
 
-.nav__item {
-
-}
-
-.nav__link {
+.footer-contacts__phone {
   color: rgba($footer-nav, 0.5);
 
   @media #{$screen-only-desktop} {
     &:hover,
     &:focus {
-      color: $footer-nav-hover;
+      color: $footer-phone-hover;
     }
   }
 }

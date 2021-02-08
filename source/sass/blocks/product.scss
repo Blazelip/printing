@@ -1,13 +1,124 @@
 .product {
+  position: relative;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 63px;
+    height: 63px;
+
+    background-color: $product-control;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--producing {
+    background-image: url("../img/producing-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/producing-desktop@2x.png");
+    }
+
+    @media #{$screen-tablet} {
+      background-image: url("../img/producing-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/producing-tablet@2x.png");
+      }
+    }
+
+    @media #{$screen-mobile} {
+      background-image: url("../img/producing-mobile@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/producing-mobile@2x.png");
+      }
+    }
+  }
+
+  &--setup {
+    background-image: url("../img/setup-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/setup-desktop@2x.png");
+    }
+
+    @media #{$screen-tablet} {
+      background-image: url("../img/setup-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/setup-tablet@2x.png");
+      }
+    }
+
+    @media #{$screen-mobile} {
+      background-image: url("../img/setup-mobile@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/setup-mobile@2x.png");
+      }
+    }
+  }
+
+  &--lights {
+    background-image: url("../img/lights-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/lights-desktop@2x.png");
+    }
+
+    @media #{$screen-tablet} {
+      background-image: url("../img/lights-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/lights-tablet@2x.png");
+      }
+    }
+
+    @media #{$screen-mobile} {
+      background-image: url("../img/lights-mobile@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/lights-mobile@2x.png");
+      }
+    }
+  }
 }
 
 .product__link {
   @include font-mixin(20px, 30px);
 
+  display: block;
+
+  min-height: 620px;
+  padding: 53px 44px;
+
   color: $product-title;
 
+  @media #{$screen-tablet} {
+    min-height: 256px;
+
+    padding: 43px 44px;
+  }
+
+  @media #{$screen-mobile} {
+    min-height: 256px;
+
+    padding: 23px 35px;
+  }
+
   h3 {
+    @include font-mixin(20px, 30px);
+
     margin: 0;
+    font-weight: 400;
   }
 }

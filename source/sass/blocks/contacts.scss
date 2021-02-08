@@ -1,14 +1,42 @@
 .contacts {
   @include font-mixin(16px, 18px);
 
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 700px;
+
   font-family: $secondary-font;
 }
 
 .contacts__item {
+  margin-right: 88px;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media #{$screen-tablet} {
+    margin-right: 33px;
+  }
+
+  @media #{$screen-mobile} {
+    margin-right: 23px;
+  }
+
+  svg {
+    margin-right: 18px;
+
+    @media #{$screen-tablet} {
+      margin-right: 0;
+    }
+  }
 }
 
 .contacts__link {
+  display: flex;
+  align-items: center;
+
   color: $header-contacts;
 
   span {
