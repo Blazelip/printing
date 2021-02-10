@@ -3,21 +3,25 @@
   padding-bottom: 111px;
 
   background-color: $feedback-bg;
-  background-image: url("../img/plane-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: 25.2% 41.1%;
+  background-image:
+    url("../img/main-triangle-desktop.svg"),
+    url("../img/plane-desktop@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 14% -200%, 25.2% 41.1%;
 
   font-family: $secondary-font;
   color: $feedback-text;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/plane-desktop@2x.png");
-    background-size: 511px;
+    background-image:
+      url("../img/main-triangle-desktop.svg")
+      url("../img/plane-desktop@2x.png");
+    background-size: auto, 511px;
   }
 
   @media #{$screen-tablet} {
     padding-top: 83px;
-    padding-bottom: 103px;
+    padding-bottom: 100px;
     background-image: none;
   }
 
@@ -37,6 +41,8 @@
 
     @media #{$screen-tablet} {
       @include font-mixin(32px, 45px);
+
+      margin-bottom: 13px;
     }
 
     @media #{$screen-mobile} {
@@ -49,6 +55,14 @@
 
     margin: 0;
     margin-bottom: 52px;
+
+    @media #{$screen-tablet} {
+      margin-bottom: 56px;
+    }
+
+    @media #{$screen-mobile} {
+      margin-bottom: 23px;
+    }
   }
 }
 
@@ -77,6 +91,10 @@
 
     border: none;
 
+    @media #{$screen-mobile} {
+      padding: 15px 18px;
+    }
+
     &::placeholder {
       @include font-mixin(16px, 22px);
 
@@ -92,9 +110,12 @@
   margin-bottom: 40px;
 
   @media #{$screen-tablet} {
-    display: block;
+    margin-bottom: 40px;
+  }
 
-    margin-bottom: 30px;
+  @media #{$screen-mobile} {
+    display: block;
+    margin-bottom: 32px;
   }
 }
 
@@ -105,9 +126,9 @@
     width: 47.46%;
   }
 
-  @media #{$screen-tablet} {
+  @media #{$screen-mobile} {
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
 
     &:last-child {
       margin-bottom: 0;
@@ -150,7 +171,7 @@
 
   @media #{$screen-mobile} {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 }
 
@@ -176,7 +197,7 @@
     width: 47.46%;
   }
 
-  @media #{$screen-tablet} {
+  @media #{$screen-mobile} {
     width: auto;
   }
 }
@@ -188,7 +209,7 @@
 
   text-align: left;
 
-  @media #{$screen-tablet} {
+  @media #{$screen-mobile} {
     padding-left: 34px;
   }
 }
@@ -204,6 +225,11 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid $white;
+
+  @media #{$screen-mobile} {
+    top: 0;
+    left: 0;
+  }
 
   .feedback__checkbox-input:not(:disabled) + & {
     cursor: pointer;

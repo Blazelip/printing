@@ -4,12 +4,12 @@
   background-color: $catalog-bg;
 
   @media #{$screen-tablet} {
-    padding-top: 53px;
-    padding-bottom: 78px;
+    padding-top: 50px;
+    padding-bottom: 81px;
   }
 
-  @media #{$screen-tablet} {
-    padding-bottom: 64px;
+  @media #{$screen-mobile} {
+    padding-bottom: 63px;
   }
 
   h2 {
@@ -34,6 +34,7 @@
 
       max-width: 400px;
       margin-bottom: 37px;
+      padding-left: 11px;
     }
   }
 }
@@ -69,6 +70,6 @@
   @media #{$screen-mobile} {
     display: block;
 
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 }

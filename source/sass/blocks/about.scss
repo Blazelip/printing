@@ -9,20 +9,26 @@
 
   @media #{$screen-mobile} {
     @include font-mixin(28px, 39px);
+
+    padding-bottom: 64px;
   }
 
   h2 {
     @include font-mixin(36px, 51px);
 
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 23px;
 
     @media #{$screen-tablet} {
       @include font-mixin(32px, 45px);
+
+      margin-bottom: 27px;
     }
 
     @media #{$screen-mobile} {
       @include font-mixin(28px, 39px);
+
+      margin-bottom: 22px;
     }
   }
 }
@@ -63,6 +69,8 @@
     }
 
     @media #{$screen-tablet} {
+      left: -2.5%;
+
       width: 180px;
       height: 361px;
 
@@ -89,10 +97,38 @@
 
   &--first {
     margin-bottom: 18px;
+
+    @media #{$screen-mobile} {
+      margin-bottom: 38px;
+    }
   }
 
   &--second {
     margin-bottom: 38px;
+
+    @media #{$screen-tablet} {
+      margin-bottom: 42px;
+    }
+
+    @media #{$screen-mobile} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media #{$screen-only-desktop} {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @media #{$screen-tablet} {
+      display: block;
+    }
   }
 }
 

@@ -91,9 +91,3 @@
     headerBtn.addEventListener(`click`, onHeaderBtnClick);
   }
 })();
-
-'use strict';
-
-(() => {
-
-})();

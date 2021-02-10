@@ -1,0 +1,19 @@
+.bg-images {
+  background-image:
+    url("../img/large-triangle-left.svg"),
+    url("../img/small-triangle-left.svg"),
+    url("../img/large-triangle-right.svg"),
+    url("../img/small-triangle-right.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 0% 115%, 13% 5%, 53% 38%, 98% 42%;
+
+  @media #{$screen-tablet} {
+    background-image: url("../img/large-triangle-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 38%;
+  }
+
+  @media #{$screen-mobile} {
+    background-position: 50% 70.5%;
+  }
+}

@@ -9,7 +9,7 @@
 
   @media #{$screen-mobile} {
     padding-top: 37px;
-    padding-bottom: 60px;
+    padding-bottom: 63px;
   }
 }
 
@@ -20,7 +20,7 @@
 .features__list {
   display: grid;
   grid-template-columns: 570px 570px;
-  gap: 30px;
+  gap: 25px;
   justify-content: center;
 
   @media #{$screen-tablet} {
@@ -28,6 +28,7 @@
   }
 
   @media #{$screen-mobile} {
+    gap: 20px;
     grid-template-columns: minmax(auto, 400px);
   }
 }
@@ -57,13 +58,18 @@
   }
 
   @media #{$screen-tablet} {
-    min-height: 306px;
-    padding: 24px 21px 34px 27px;
+    min-height: 232px;
+    padding: 24px 20px 24px 27px;
   }
 
-  @media #{$screen-tablet} {
-    min-height: 310px;
-    padding: 25px 18px 38px 27px;
+  @media #{$screen-mobile} {
+    padding: 25px 18px 24px 24px;
+  }
+
+  &--mobile {
+    @media #{$screen-mobile} {
+      padding: 20px 10px 24px 24px;
+    }
   }
 
   svg {
@@ -71,12 +77,11 @@
     fill: $light-blue;
 
     @media #{$screen-tablet} {
-      margin-bottom: 13px;
+      margin-bottom: 2px;
     }
 
     @media #{$screen-mobile} {
-
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
   }
 
@@ -90,13 +95,11 @@
     color: $features-title;
 
     @media #{$screen-tablet} {
-      margin-bottom: 22px;
+      margin-bottom: 9px;
     }
 
     @media #{$screen-mobile} {
       @include font-mixin(20px, 28px);
-
-      margin-bottom: 16px;
     }
   }
 

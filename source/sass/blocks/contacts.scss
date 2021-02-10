@@ -23,14 +23,6 @@
   @media #{$screen-mobile} {
     margin-right: 23px;
   }
-
-  svg {
-    margin-right: 18px;
-
-    @media #{$screen-tablet} {
-      margin-right: 0;
-    }
-  }
 }
 
 .contacts__link {
@@ -42,6 +34,16 @@
   span {
     @media #{$screen-tablet} {
       display: none;
+    }
+  }
+
+  svg {
+    margin-right: 18px;
+
+    @media #{$screen-tablet} {
+      width: 25px;
+      height: 19px;
+      margin-right: 0;
     }
   }
 }

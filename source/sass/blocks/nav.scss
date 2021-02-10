@@ -8,7 +8,9 @@
   font-family: $secondary-font;
 
   @media #{$screen-tablet} {
-    display: block;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: min-content min-content;
   }
 
   @media #{$screen-mobile} {
@@ -27,7 +29,9 @@
 }
 
 .nav__item {
-
+  &:nth-child(2n) {
+    order: 1;
+  }
 }
 
 .nav__link {

@@ -1,51 +1,59 @@
 .header {
+  position: relative;
+
   padding-top: 33px;
   min-height: 878px;
 
   background-color: $header-bg;
   background-image:
     url("../img/microchip-desktop@1x.png"),
+    url("../img/main-triangle-desktop.svg"),
     url("../img/background-desktop@1x.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 85.5% 71.3%, center;
-  background-size: 705px 515px, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 85.5% 71.3%, 82.5% 50%, center;
+  background-size: 705px 515px, auto, cover;
 
   @media (min-resolution: 2dppx) {
     background-image:
       url("../img/microchip-desktop@2x.png"),
+      url("../img/main-triangle-desktop.svg"),
       url("../img/background-desktop@2x.png");
   }
 
   @media #{$screen-tablet} {
     padding-top: 20px;
-    min-height: 873px;
+    min-height: 686px;
 
     background-image:
       url("../img/microchip-tablet@1x.png"),
+      url("../img/main-triangle-tablet.svg"),
       url("../img/background-desktop@1x.png");
-    background-position: 1% 1%, center;
-    background-size: 465px 340px, cover;
+    background-position: 168% 33%, 183% -22%, center;
+    background-size: 465px 340px, auto, cover;
 
     @media (min-resolution: 2dppx) {
       background-image:
         url("../img/microchip-tablet@2x.png"),
+        url("../img/main-triangle-tablet.svg"),
         url("../img/background-desktop@2x.png");
     }
   }
 
   @media #{$screen-mobile} {
-    min-height: 834px;
+    min-height: 647px;
     padding-top: 17px;
 
     background-image:
       url("../img/microchip-mobile@1x.png"),
+      url("../img/main-triangle-mobile.svg"),
       url("../img/background-desktop@1x.png");
-    background-position: 1% 1%, center;
-    background-size: 301px 220px, cover;
+    background-position: 136% 22%, -82% -28%, center;
+    background-size: 301px 220px, auto, cover;
 
     @media (min-resolution: 2dppx) {
       background-image:
         url("../img/microchip-mobile@2x.png"),
+        url("../img/main-triangle-mobile.svg"),
         url("../img/background-desktop@2x.png");
     }
   }
@@ -135,10 +143,14 @@
 
     @media #{$screen-tablet} {
       @include font-mixin(60px, 70px);
+
+      margin-bottom: 30px;
     }
 
     @media #{$screen-mobile} {
       @include font-mixin(40px, 47px);
+
+      margin-bottom: 26px;
     }
   }
 
@@ -157,7 +169,7 @@
     @media #{$screen-tablet} {
       @include font-mixin(18px, 28px);
 
-      margin-bottom: 51px;
+      margin-bottom: 54px;
       padding-left: 51px;
     }
 
