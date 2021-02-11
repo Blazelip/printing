@@ -1,0 +1,18 @@
+.scroll-down {
+  display: none;
+
+  @media #{$screen-only-desktop} {
+    @include font-mixin(14px, 16px);
+
+    display: inline-block;
+
+    position: absolute;
+    left: 11.2%;
+    top: 83.7%;
+
+    font-family: $secondary-font;
+    color: rgba($white, 0.5);
+
+    transform: rotate(-90deg);
+  }
+}

@@ -5,7 +5,7 @@
   const headerBtn = page.querySelector(`.header__button-top`);
   const modal = page.querySelector(`.modal`);
   const form = modal.querySelector(`.modal__form`);
-  const page = modal.querySelector(`.modal__close`);
+  const modalClose = modal.querySelector(`.modal__close`);
 
   const name = modal.querySelector(`[name="customer"]`);
   const phone = modal.querySelector(`[name="phone"]`);

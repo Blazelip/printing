@@ -12,6 +12,7 @@
 </head>
 <body class="page">
   <header class="header">
+    <a href="#features" class="scroll-down button">Скролл вниз</a>
     <div class="header__wrapper wrapper">
       <div class="header__top">
         <div class="header__logo logo">
@@ -52,7 +53,7 @@
         <div class="header__hero-container">
           <h1>Печатные платы</h1>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a href="#" class="header__button-hero button button--main">
+          <a href="#feedback" class="header__button-hero button button--main">
             <span class="button__text-1">Получить бесплатную консультацию</span>
             <span class="button__text-2">Бесплатная консультация</span>
           </a>
@@ -63,7 +64,7 @@
 
   <main>
     <div class="bg-images">
-      <section class="features">
+      <section id="features" class="features">
         <div class="wrapper">
           <h2 class="visually-hidden">Наши преимущества</h2>
 
@@ -163,7 +164,7 @@
       </div>
     </section>
 
-    <section class="feedback">
+    <section id="feedback" class="feedback">
       <div class="wrapper">
         <div class="feedback__container">
           <h2>Остались вопросы? Задайте их нам!</h2>
@@ -243,10 +244,10 @@
         <div class="footer__column-2">
           <div class="footer__heading">
             <h3>Разделы сайта</h3>
-            <button class="footer__button button button--accordeon button--accordeon-closed" type="button" aria-label="Открыть раздел"></button>
+            <button class="footer__button button button--accordeon button--nav" type="button" aria-label="Открыть раздел"></button>
           </div>
 
-          <ul class="nav list nav--closed">
+          <ul class="nav list">
             <li class="nav__item">
               <a href="#" class="nav__link">О компании</a>
             </li>
@@ -274,7 +275,7 @@
         <div class="footer__column-3">
           <div class="footer__heading">
             <h3>Наш офис</h3>
-            <button class="footer__button button button--accordeon button--accordeon-opened" type="button" aria-label="Открыть раздел"></button>
+            <button class="footer__button button button--accordeon button--contacts button--accordeon-opened" type="button" aria-label="Открыть раздел"></button>
           </div>
           <ul class="footer__contacts footer-contacts footer-contacts--opened list">
             <li>

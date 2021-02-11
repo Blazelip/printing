@@ -61,23 +61,6 @@
 
 .header__wrapper {
   position: relative;
-
-  @media #{$screen-only-desktop} {
-    &::before {
-      @include font-mixin(14px, 16px);
-
-      content: "Скролл вниз";
-
-      position: absolute;
-      left: -1.8%;
-      top: 123%;
-
-      font-family: $secondary-font;
-      color: rgba($white, 0.5);
-
-      transform: rotate(-90deg);
-    }
-  }
 }
 
 .header__top {

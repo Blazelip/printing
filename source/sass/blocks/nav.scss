@@ -14,12 +14,10 @@
   }
 
   @media #{$screen-mobile} {
+    display: none;
+
     &--nojs {
       display: block;
-    }
-
-    &--closed {
-      display: none;
     }
 
     &--opened {
@@ -29,8 +27,10 @@
 }
 
 .nav__item {
-  &:nth-child(2n) {
-    order: 1;
+  @media #{$screen-tablet} {
+    &:nth-child(2n) {
+      order: 1;
+    }
   }
 }
 

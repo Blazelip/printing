@@ -1,11 +1,9 @@
 .footer-contacts {
   @media #{$screen-mobile} {
+    display: none;
+
     &--nojs {
       display: block;
-    }
-
-    &--closed {
-      display: none;
     }
 
     &--opened {
