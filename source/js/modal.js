@@ -73,7 +73,7 @@
       evt.preventDefault();
     } else {
       if (isStorageSupport) {
-        localStorage.setItem('login', login.value);
+        localStorage.setItem('name', name.value);
         localStorage.setItem('phone', phone.value);
         localStorage.setItem('question', question.value);
       }

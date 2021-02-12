@@ -33,7 +33,7 @@
   };
 
   const checkNumberByRegex = (number) => {
-    return REGEX.test(number);
+    return REGEX.test(number.value);
   }
 
   const onFormSubmitValidate = (form, evt) => {

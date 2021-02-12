@@ -73,7 +73,7 @@
       evt.preventDefault();
     } else {
       if (isStorageSupport) {
-        localStorage.setItem('login', login.value);
+        localStorage.setItem('name', name.value);
         localStorage.setItem('phone', phone.value);
         localStorage.setItem('question', question.value);
       }
@@ -127,7 +127,7 @@
   };
 
   const checkNumberByRegex = (number) => {
-    return REGEX.test(number);
+    return REGEX.test(number.value);
   }
 
   const onFormSubmitValidate = (form, evt) => {
