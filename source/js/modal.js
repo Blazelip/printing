@@ -26,7 +26,7 @@
           name.focus();
       }
 
-      if (storageEmail) {
+      if (storagePhone) {
           phone.value = storagePhone;
       }
   };
