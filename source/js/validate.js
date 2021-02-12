@@ -21,9 +21,10 @@
   };
 
   const limitNumberLength = (input) => {
-    if (input.value.length > PHONE_MIN_LENGTH || input.value.length < PHONE_MIN_LENGTH) {
-      input.setCustomValidity(`Номер без кода должен состоять из 10 цифр`);
 
+    if (input.value.length > PHONE_MIN_LENGTH || input.value.length < PHONE_MIN_LENGTH) {
+      console.log(`1`);
+      input.setCustomValidity(`Номер без кода должен состоять из 10 цифр`);
       return true;
     } else {
       input.setCustomValidity('');
@@ -38,12 +39,11 @@
 
   const onFormSubmitValidate = (form, evt) => {
     const phone = form.querySelector(`[name="phone"]`);
-    console.log(checkNumberByRegex(phone));
-    console.log(limitNumberLength(phone));
+    // console.log(checkNumberByRegex(phone));
+    // console.log(limitNumberLength(phone));
 
     if (limitNumberLength(phone) || !checkNumberByRegex(phone)) {
       evt.preventDefault();
-      console.log(`1`);
     }
   };
 
@@ -68,16 +68,4 @@
       });
     }
   });
-
-
-
-  // if (phoneInputs) {
-  //   phoneInputs.forEach((input) => {
-  //     input.addEventListener(`change`, () => {
-  //       limitNumberLength(input);
-
-  //     });
-  //   });
-  // }
-
 })();
