@@ -34,6 +34,7 @@ gulp.task('css', function () {
 
 gulp.task('javascript', function () {
   return gulp.src([
+    './node_modules/vanilla-text-mask/dist/vanillaTextMask.js',
     './source/js/modal.js',
     './source/js/validate.js',
     './source/js/accordeon.js'

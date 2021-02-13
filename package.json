@@ -52,6 +52,6 @@
   },
   "dependencies": {
     "del": "^4.1.1",
-    "imask": "^6.0.7"
+    "vanilla-text-mask": "^5.1.1"
   }
 }

@@ -87,8 +87,9 @@
     width: 100%;
     padding: 15px 22px;
 
-    background-color: rgba($feedback-input-bg, 0.1);
+    color: $feedback-text;
 
+    background-color: rgba($feedback-input-bg, 0.1);
     border: none;
 
     @media #{$screen-mobile} {

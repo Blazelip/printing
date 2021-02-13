@@ -1110,6 +1110,7 @@ img {
 .feedback__form textarea {
   width: 100%;
   padding: 15px 22px;
+  color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border: none; }
   @media (max-width: 767px) {
@@ -1571,6 +1572,7 @@ img {
 .modal__form textarea {
   width: 100%;
   padding: 15px 24px;
+  color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border: none; }
   .modal__form input::-webkit-input-placeholder,
