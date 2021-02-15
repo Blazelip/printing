@@ -1050,7 +1050,7 @@ img {
   background-color: #00b2ff;
   background-image: url("../img/main-triangle-desktop.svg"), url("../img/plane-desktop@1x.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: 14% -200%, 25.2% 41.1%;
+  background-position: 14% -200%, 25% 42.1%;
   font-family: "PT Mono", "Courier New", monospace;
   color: #ffffff; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
