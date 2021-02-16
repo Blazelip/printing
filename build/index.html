@@ -16,7 +16,7 @@
     <div class="header__wrapper wrapper">
       <div class="header__top">
         <div class="header__logo logo">
-          <a class="logo__link">
+          <a href="" class="logo__link">
             <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
           </a>
           <div class="logo__text">
@@ -172,23 +172,23 @@
           <form class="feedback__form js-form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="feedback__primary">
               <div class="feedback__field">
-                <label class="visually-hidden" for="customer">Ваше имя</label>
-                <input type="text" name="customer" id="customer" placeholder="Имя">
+                <label class="visually-hidden" for="feedback-customer">Ваше имя</label>
+                <input type="text" name="customer" id="feedback-customer" placeholder="Имя">
               </div>
               <div class="feedback__field">
-                <label class="visually-hidden" for="phone">Ваш телефон (обязательно)</label>
-                <input type="tel" name="phone" id="phone" placeholder="Телефон">
+                <label class="visually-hidden" for="feedback-phone">Ваш телефон (обязательно)</label>
+                <input type="tel" name="phone" id="feedback-phone" placeholder="Телефон">
               </div>
             </div>
             <div class="feedback__textarea">
-              <label class="visually-hidden" for="question">Ваш вопрос</label>
-              <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+              <label class="visually-hidden" for="feedback-question">Ваш вопрос</label>
+              <textarea name="question" id="feedback-question" placeholder="Ваш вопрос"></textarea>
             </div>
             <div class="feedback__footer">
               <button class="feedback__btn button button--main" type="submit">Задать вопрос</button>
               <div class="feedback__agreement">
-                <label class="feedback__check" for="agreement">
-                  <input class="feedback__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="agreement" value="ok">
+                <label class="feedback__check" for="feedback-agreement">
+                  <input class="feedback__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="feedback-agreement" value="ok">
                   <span class="feedback__checkbox"></span>
                   Я согласен на обработку<br>персональных данных
                 </label>
@@ -205,7 +205,7 @@
       <div class="footer__row-1">
         <div class="footer__column-1">
           <div class="footer__logo logo">
-            <a class="logo__link logo__link--footer">
+            <a href="" class="logo__link logo__link--footer">
               <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
             </a>
             <div class="logo__text logo__text--footer">
@@ -218,21 +218,21 @@
 
           <ul class="footer__socials socials list">
             <li class="socials__item">
-              <a href="" class="socials__link" aria-label="Мы в Фейсбуке">
+              <a href="#" class="socials__link" aria-label="Мы в Фейсбуке">
                 <svg width="27" height="27">
                   <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a href="" class="socials__link" aria-label="Мы в Одноклассниках">
+              <a href="#" class="socials__link" aria-label="Мы в Одноклассниках">
                 <svg width="27" height="26">
                   <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a href="" class="socials__link" aria-label="Мы в ВКонтакте">
+              <a href="#" class="socials__link" aria-label="Мы в ВКонтакте">
                 <svg width="27" height="26">
                   <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
                 </svg>
@@ -313,22 +313,22 @@
     <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form class="modal__form js-form" action="https://echo.htmlacademy.ru" method="POST">
       <div class="modal__field">
-        <label class="visually-hidden" for="customer">Ваше имя</label>
-        <input type="text" name="customer" id="customer" placeholder="Имя">
+        <label class="visually-hidden" for="modal-customer">Ваше имя</label>
+        <input type="text" name="customer" id="modal-customer" placeholder="Имя">
       </div>
       <div class="modal__field">
-        <label class="visually-hidden" for="phone">Ваш телефон (обязательно)</label>
-        <input type="tel" name="phone" id="phone" placeholder="Телефон">
+        <label class="visually-hidden" for="modal-phone">Ваш телефон (обязательно)</label>
+        <input type="tel" name="phone" id="modal-phone" placeholder="Телефон">
       </div>
       <div class="modal__textarea">
-        <label class="visually-hidden" for="question">Ваш вопрос</label>
-        <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+        <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+        <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
       </div>
       <div class="modal__footer">
         <button class="modal__btn button button--main" type="submit">Отправить</button>
         <div class="modal__agreement">
-          <label class="modal__check" for="agreement-footer">
-            <input class="modal__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="agreement-footer" value="ok">
+          <label class="modal__check" for="modal-agreement">
+            <input class="modal__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="modal-agreement" value="ok">
             <span class="modal__checkbox"></span>
             Я согласен на обработку персональных данных
           </label>
@@ -336,7 +336,7 @@
       </div>
     </form>
 
-     <button class="modal__close button" type="submit" aria-label="Закрыть окно"></button>
+    <button class="modal__close button" type="submit" aria-label="Закрыть окно"></button>
   </section>
   <script src="js/main.js"></script>
 </body>

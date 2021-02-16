@@ -38,7 +38,7 @@
       modal.classList.add(`modal--opened`);
       document.addEventListener(`keydown`, onModalEscPress);
       modalClose.addEventListener(`click`, onCloseCrossClick);
-      form.addEventListener(`submit`, onFormSumbit);
+      form.addEventListener(`submit`, onFormSubmit);
       fillForm();
     }
   };
@@ -50,13 +50,13 @@
       modal.classList.remove(`modal--opened`);
       document.removeEventListener(`keydown`, onModalEscPress);
       modalClose.removeEventListener(`click`, onCloseCrossClick);
-      form.removeEventListener(`submit`, onFormSumbit);
+      form.removeEventListener(`submit`, onFormSubmit);
     }
   };
 
   const onModalEscPress = (evt) => {
     if (evt.key === `Escape`) {
-      switchModal();
+      closeModal();
     }
   };
 
@@ -68,7 +68,7 @@
     closeModal();
   };
 
-  const onFormSumbit = (evt) => {
+  const onFormSubmit = (evt) => {
     if (!name.value || !phone.value) {
       evt.preventDefault();
     } else {

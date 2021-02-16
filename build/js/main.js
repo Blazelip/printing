@@ -39,7 +39,7 @@
       modal.classList.add(`modal--opened`);
       document.addEventListener(`keydown`, onModalEscPress);
       modalClose.addEventListener(`click`, onCloseCrossClick);
-      form.addEventListener(`submit`, onFormSumbit);
+      form.addEventListener(`submit`, onFormSubmit);
       fillForm();
     }
   };
@@ -51,13 +51,13 @@
       modal.classList.remove(`modal--opened`);
       document.removeEventListener(`keydown`, onModalEscPress);
       modalClose.removeEventListener(`click`, onCloseCrossClick);
-      form.removeEventListener(`submit`, onFormSumbit);
+      form.removeEventListener(`submit`, onFormSubmit);
     }
   };
 
   const onModalEscPress = (evt) => {
     if (evt.key === `Escape`) {
-      switchModal();
+      closeModal();
     }
   };
 
@@ -69,7 +69,7 @@
     closeModal();
   };
 
-  const onFormSumbit = (evt) => {
+  const onFormSubmit = (evt) => {
     if (!name.value || !phone.value) {
       evt.preventDefault();
     } else {
@@ -115,7 +115,7 @@
 
 (() => {
   const buttonNav = document.querySelector(`.button--nav`);
-  const buttonContatcs = document.querySelector(`.button--contacts`);
+  const buttonContacts = document.querySelector(`.button--contacts`);
 
   const nav = document.querySelector(`.nav`);
   const contacts = document.querySelector(`.footer-contacts`);
@@ -125,16 +125,16 @@
     buttonNav.classList.toggle(`button--accordeon-opened`);
   };
 
-  const onbuttonContatcsClick = () => {
+  const onbuttonContactsClick = () => {
     contacts.classList.toggle(`footer-contacts--opened`);
-    buttonContatcs.classList.toggle(`button--accordeon-opened`);
+    buttonContacts.classList.toggle(`button--accordeon-opened`);
   };
 
   if (buttonNav) {
     buttonNav.addEventListener(`click`, onButtonNavClick);
   }
 
-  if (buttonContatcs) {
-    buttonContatcs.addEventListener(`click`, onbuttonContatcsClick);
+  if (buttonContacts) {
+    buttonContacts.addEventListener(`click`, onbuttonContactsClick);
   }
 })();

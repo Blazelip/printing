@@ -596,7 +596,8 @@ img {
       font-family: "PT Mono", "Courier New", monospace;
       color: rgba(255, 255, 255, 0.5);
       -webkit-transform: rotate(-90deg);
-              transform: rotate(-90deg); } }
+              transform: rotate(-90deg);
+      vertical-align: middle; } }
 
 .logo {
   display: -webkit-box;

@@ -2,7 +2,7 @@
 
 (() => {
   const buttonNav = document.querySelector(`.button--nav`);
-  const buttonContatcs = document.querySelector(`.button--contacts`);
+  const buttonContacts = document.querySelector(`.button--contacts`);
 
   const nav = document.querySelector(`.nav`);
   const contacts = document.querySelector(`.footer-contacts`);
@@ -12,16 +12,16 @@
     buttonNav.classList.toggle(`button--accordeon-opened`);
   };
 
-  const onbuttonContatcsClick = () => {
+  const onbuttonContactsClick = () => {
     contacts.classList.toggle(`footer-contacts--opened`);
-    buttonContatcs.classList.toggle(`button--accordeon-opened`);
+    buttonContacts.classList.toggle(`button--accordeon-opened`);
   };
 
   if (buttonNav) {
     buttonNav.addEventListener(`click`, onButtonNavClick);
   }
 
-  if (buttonContatcs) {
-    buttonContatcs.addEventListener(`click`, onbuttonContatcsClick);
+  if (buttonContacts) {
+    buttonContacts.addEventListener(`click`, onbuttonContactsClick);
   }
 })();
