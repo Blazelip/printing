@@ -1,8 +1,8 @@
 $mobile-width: 320px;
-$tablet-width: 768px;
+$tablet-width: 770px;
 $desktop-width: 1024px;
 
-$mobile-width-only: 767px;
+$mobile-width-only: 769px;
 $tablet-width-only: 1023px;
 
 $screen-mobile: (max-width: $mobile-width-only);
@@ -13,10 +13,10 @@ $white: #ffffff;
 $black: #000000;
 $dark-blue: #1b2d37;
 $grey-1: #788891;
-$grey-2: #cdcdcd;
 $light-blue: #00b2ff;
 $grey-2: #666666;
 $grey-3: #ebebeb;
+$grey-4: #cdcdcd;
 $dark-2: #203c42;
 
 $logo-title: $white;
@@ -24,7 +24,13 @@ $logo-descr: $grey-1;
 $header-bg: $dark-blue;
 $header-contacts: $white;
 $btn-color: $white;
-$hero-button-bg: #00b2ff;
+$hero-button-bg: $light-blue;
+$hero-button-bg-hover: $white;
+$hero-button-text-hover: $light-blue;
+
+$contacts-link-svg: $light-blue;
+$contacts-link-svg-hover: $white;
+$contacts-link-hover: $light-blue;
 
 $main-title: $white;
 $description: $white;
@@ -62,7 +68,7 @@ $footer-contacts: $dark-blue;
 $footer-law: $dark-blue;
 $footer-phone-hover: $light-blue;
 
-$socials-icon: $grey-2;
+$socials-icon: $grey-4;
 
 $modal-bg: $light-blue;
 $modal-text: $white;

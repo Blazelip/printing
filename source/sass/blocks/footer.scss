@@ -22,6 +22,14 @@
     margin-bottom: 0;
   }
 
+  &--nojs {
+    @media #{$screen-mobile} {
+      .button--accordeon {
+        display: none;
+      }
+    }
+  }
+
   h3 {
     @include font-mixin(15px, 16px);
 
@@ -48,12 +56,13 @@
     column-gap: 4.86%;
     row-gap: 38px;
 
-    margin-bottom: 33px;
+    margin-bottom: 36px;
     padding: 0;
   }
 
   @media #{$screen-mobile} {
     display: block;
+    margin-bottom: 28px;
   }
 }
 
@@ -67,7 +76,7 @@
 
     margin-left: -25px;
     margin-right: -25px;
-    padding: 0 25px 26px;
+    padding: 0 25px 21px;
 
     border-bottom: 1px solid rgba(#626962, 0.2);
   }
@@ -82,7 +91,8 @@
 }
 
 .footer__logo {
-  width: 216px;
+  display: block;
+
   margin-bottom: 53px;
 
   @media #{$screen-tablet} {
@@ -90,7 +100,7 @@
   }
 
   @media #{$screen-mobile} {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 }
 

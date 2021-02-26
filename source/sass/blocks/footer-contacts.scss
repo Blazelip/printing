@@ -26,7 +26,11 @@
   @media #{$screen-only-desktop} {
     &:hover,
     &:focus {
-      color: $footer-phone-hover;
+      color: rgba($footer-phone-hover, 1);
+    }
+
+    &:active {
+      color: rgba($footer-nav, 1);
     }
   }
 }

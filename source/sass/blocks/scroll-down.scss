@@ -7,13 +7,22 @@
     display: inline-block;
 
     position: absolute;
-    left: 11.2%;
-    top: 83.7%;
+    left: -1.8%;
+    top: 123%;
 
     font-family: $secondary-font;
     color: rgba($white, 0.5);
 
     transform: rotate(-90deg);
     vertical-align: middle;
+
+    &:hover,
+    &:focus {
+      color: rgba($white, 1);
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
   }
 }

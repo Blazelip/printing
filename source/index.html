@@ -12,18 +12,15 @@
 </head>
 <body class="page">
   <header class="header">
-    <a href="#features" class="scroll-down button">Скролл вниз</a>
     <div class="header__wrapper wrapper">
+      <a href="#features" class="scroll-down button">Скролл вниз</a>
       <div class="header__top">
-        <div class="header__logo logo">
-          <a href="" class="logo__link">
-            <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
-          </a>
-          <div class="logo__text">
-            <p class="logo__title">Smart Device</p>
-            <p class="logo__descr">умные технологии</p>
-          </div>
-        </div>
+        <a href="#" class="header__logo">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+            <img src="img/logo.svg" srcset="img/logo.svg" width="202" height="52" alt="Логотип магазина Smart Device">
+          </picture>
+        </a>
 
         <ul class="header__contacts contacts list">
           <li class="contacts__item">
@@ -44,7 +41,7 @@
           </li>
         </ul>
 
-        <a href="#" class="header__button-top button button--main">
+        <a href="modal.html" class="header__button-top button button--main">
           Заказать звонок
         </a>
       </div>
@@ -169,26 +166,26 @@
         <div class="feedback__container">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <p>Мы проконсультируем Вас бесплатно</p>
-          <form class="feedback__form js-form" action="https://echo.htmlacademy.ru" method="POST">
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="feedback__primary">
               <div class="feedback__field">
                 <label class="visually-hidden" for="feedback-customer">Ваше имя</label>
-                <input type="text" name="customer" id="feedback-customer" placeholder="Имя">
+                <input type="text" name="customer" id="feedback-customer" placeholder="Имя" required>
               </div>
               <div class="feedback__field">
                 <label class="visually-hidden" for="feedback-phone">Ваш телефон (обязательно)</label>
-                <input type="tel" name="phone" id="feedback-phone" placeholder="Телефон">
+                <input type="tel" name="phone" id="feedback-phone" placeholder="Телефон" required>
               </div>
             </div>
             <div class="feedback__textarea">
               <label class="visually-hidden" for="feedback-question">Ваш вопрос</label>
-              <textarea name="question" id="feedback-question" placeholder="Ваш вопрос"></textarea>
+              <textarea name="question" id="feedback-question" placeholder="Ваш вопрос" required></textarea>
             </div>
             <div class="feedback__footer">
               <button class="feedback__btn button button--main" type="submit">Задать вопрос</button>
               <div class="feedback__agreement">
                 <label class="feedback__check" for="feedback-agreement">
-                  <input class="feedback__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="feedback-agreement" value="ok">
+                  <input class="feedback__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="feedback-agreement" value="ok" required>
                   <span class="feedback__checkbox"></span>
                   Я согласен на обработку<br>персональных данных
                 </label>
@@ -204,15 +201,11 @@
     <div class="wrapper">
       <div class="footer__row-1">
         <div class="footer__column-1">
-          <div class="footer__logo logo">
-            <a href="" class="logo__link logo__link--footer">
-              <img src="img/logo.svg" width="52" height="52" alt="Логотип Smart Device">
-            </a>
-            <div class="logo__text logo__text--footer">
-              <p class="logo__title logo__title--footer">Service Device</p>
-              <p class="logo__descr">умные технологии</p>
-            </div>
-          </div>
+          <a href="" class="footer__logo">
+            <picture>
+              <img src="img/footer-logo.svg" srcset="img/footer-logo.svg" width="216" height="52" alt="Логотип магазина Smart Device">
+            </picture>
+          </a>
 
           <p class="footer__ref-text">1999-2018 SD Service Devices</p>
 
@@ -242,12 +235,12 @@
         </div>
 
         <div class="footer__column-2">
-          <div class="footer__heading">
+          <div class="footer__heading js-nav footer__heading--nojs">
             <h3>Разделы сайта</h3>
-            <button class="footer__button button button--accordeon button--nav" type="button" aria-label="Открыть раздел"></button>
+            <button class="footer__button button button--accordeon" type="button" aria-label="Открыть раздел"></button>
           </div>
 
-          <ul class="nav list">
+          <ul class="nav list nav--opened">
             <li class="nav__item">
               <a href="#" class="nav__link">О компании</a>
             </li>
@@ -273,11 +266,11 @@
         </div>
 
         <div class="footer__column-3">
-          <div class="footer__heading">
+          <div class="footer__heading js-contacts footer__heading--nojs">
             <h3>Наш офис</h3>
-            <button class="footer__button button button--accordeon button--contacts button--accordeon-opened" type="button" aria-label="Открыть раздел"></button>
+            <button class="footer__button button button--accordeon" type="button" aria-label="Открыть раздел"></button>
           </div>
-          <ul class="footer__contacts footer-contacts footer-contacts--opened list">
+          <ul class="footer__contacts footer-contacts list footer-contacts--opened">
             <li>
               <address>г. Мытищи, Олимпийский проспект, д.10</address>
             </li>
@@ -311,24 +304,24 @@
   <section class="modal">
     <h3>Закажите звонок</h3>
     <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form class="modal__form js-form" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
       <div class="modal__field">
         <label class="visually-hidden" for="modal-customer">Ваше имя</label>
-        <input type="text" name="customer" id="modal-customer" placeholder="Имя">
+        <input type="text" name="customer" id="modal-customer" placeholder="Имя" required>
       </div>
       <div class="modal__field">
         <label class="visually-hidden" for="modal-phone">Ваш телефон (обязательно)</label>
-        <input type="tel" name="phone" id="modal-phone" placeholder="Телефон">
+        <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required>
       </div>
       <div class="modal__textarea">
         <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
-        <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
+        <textarea name="question" id="modal-question" placeholder="Ваш вопрос" required></textarea>
       </div>
       <div class="modal__footer">
         <button class="modal__btn button button--main" type="submit">Отправить</button>
         <div class="modal__agreement">
           <label class="modal__check" for="modal-agreement">
-            <input class="modal__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="modal-agreement" value="ok">
+            <input class="modal__checkbox-input visually-hidden" type="checkbox" name="data-agreement" id="modal-agreement" value="ok" required>
             <span class="modal__checkbox"></span>
             Я согласен на обработку персональных данных
           </label>

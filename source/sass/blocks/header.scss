@@ -10,7 +10,7 @@
     url("../img/main-triangle-desktop.svg"),
     url("../img/background-desktop@1x.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 85.5% 71.3%, 82.5% 50%, center;
+  background-position: calc(50vw + 76px) 256px, calc(50vw + 70px) 118px, center;
   background-size: 705px 515px, auto, cover;
 
   @media (min-resolution: 2dppx) {
@@ -21,14 +21,14 @@
   }
 
   @media #{$screen-tablet} {
-    padding-top: 20px;
+    padding-top: 18px;
     min-height: 686px;
 
     background-image:
       url("../img/microchip-tablet@1x.png"),
       url("../img/main-triangle-tablet.svg"),
       url("../img/background-desktop@1x.png");
-    background-position: 168% 33%, 183% -22%, center;
+    background-position: calc(50vw + 124px) 113px, calc(50vw + 55px) - 39px, center;
     background-size: 465px 340px, auto, cover;
 
     @media (min-resolution: 2dppx) {
@@ -41,13 +41,13 @@
 
   @media #{$screen-mobile} {
     min-height: 647px;
-    padding-top: 17px;
+    padding-top: 13px;
 
     background-image:
       url("../img/microchip-mobile@1x.png"),
       url("../img/main-triangle-mobile.svg"),
       url("../img/background-desktop@1x.png");
-    background-position: 136% 22%, -82% -28%, center;
+    background-position: calc(8vw) 93px, calc(46vw + 5px) -46px, center;
     background-size: 301px 220px, auto, cover;
 
     @media (min-resolution: 2dppx) {
@@ -56,6 +56,12 @@
         url("../img/main-triangle-mobile.svg"),
         url("../img/background-desktop@2x.png");
     }
+  }
+
+  .page--modal & {
+    min-height: auto;
+    background-image: none;
+    padding-bottom: 33px;
   }
 }
 
@@ -70,6 +76,10 @@
   margin-bottom: 231px;
   padding: 0 15px;
 
+  .page--modal & {
+    margin-bottom: 0;
+  }
+
   @media #{$screen-tablet} {
     margin-bottom: 116px;
     padding: 0;
@@ -77,6 +87,15 @@
 
   @media #{$screen-mobile} {
     margin-bottom: 231px;
+  }
+}
+
+.header__logo {
+  img {
+    @media #{$screen-mobile} {
+      width: 38px;
+      height: 38px;
+    }
   }
 }
 
@@ -90,6 +109,17 @@
 
   @media #{$screen-tablet} {
     display: none;
+  }
+
+  @media #{$screen-only-desktop} {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -123,7 +153,7 @@
     @media #{$screen-tablet} {
       @include font-mixin(60px, 70px);
 
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     @media #{$screen-mobile} {
@@ -186,6 +216,19 @@
 
   background-color: $hero-button-bg;
   border: none;
+
+  @media #{$screen-only-desktop} {
+    &:hover,
+    &:focus {
+      color: $hero-button-text-hover;
+
+      background-color: $hero-button-bg-hover;
+    }
+
+    &:active {
+      background-color: rgba($hero-button-bg-hover, 0.8);
+    }
+  }
 
   @media #{$screen-tablet} {
     width: 379px;

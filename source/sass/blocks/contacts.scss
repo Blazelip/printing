@@ -40,10 +40,28 @@
   svg {
     margin-right: 18px;
 
+    color: $contacts-link-svg;
+
     @media #{$screen-tablet} {
       width: 25px;
       height: 19px;
       margin-right: 0;
     }
+  }
+}
+
+
+@media #{$screen-only-desktop} {
+  .contacts__link:hover,
+  .contacts__link:focus {
+    color: $contacts-link-hover;
+
+    svg {
+      color: $contacts-link-svg-hover;
+    }
+  }
+
+  .contacts__link:active {
+    opacity: 0.7;
   }
 }

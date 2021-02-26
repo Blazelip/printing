@@ -24,8 +24,8 @@
     border-radius: 5px;
   }
 
-  @media #{$screen-mobile} {
-    &--accordeon {
+  &--accordeon {
+    @media #{$screen-mobile} {
       display: inline-block;
       width: 16px;
       height: 16px;
@@ -34,14 +34,13 @@
       background-repeat: no-repeat;
       background-size: center;
     }
+  }
+}
 
-    &--accordeon-nojs {
-      display: none;
-    }
-
-    &--accordeon-opened {
-      background-image: url("../img/minus.svg");
-    }
+.js-nav--opened .button--accordeon,
+.js-contacts--opened .button--accordeon {
+  @media #{$screen-mobile} {
+    background-image: url("../img/minus.svg");
   }
 }
 

@@ -40,7 +40,11 @@
   @media #{$screen-only-desktop} {
     &:hover,
     &:focus {
-      color: $footer-nav-hover;
+      color: rgba($footer-nav-hover, 1);
+    }
+
+    &:active {
+      color: rgba($footer-nav, 1);
     }
   }
 }

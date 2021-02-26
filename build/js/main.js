@@ -2,95 +2,97 @@
 'use strict';
 
 (() => {
-  const page = document.querySelector(`.page`);
-  const headerBtn = page.querySelector(`.header__button-top`);
-  const modal = page.querySelector(`.modal`);
-  const form = modal.querySelector(`.modal__form`);
-  const modalClose = modal.querySelector(`.modal__close`);
+  document.addEventListener(`DOMContentLoaded`, () => {
+    const page = document.querySelector(`.page`);
+    const headerBtn = page.querySelector(`.header__button-top`);
+    const modal = page.querySelector(`.modal`);
+    const form = modal.querySelector(`.modal__form`);
+    const modalClose = modal.querySelector(`.modal__close`);
 
-  const name = modal.querySelector(`[name="customer"]`);
-  const phone = modal.querySelector(`[name="phone"]`);
-  const question = modal.querySelector(`[name="question"]`);
+    const name = modal.querySelector(`[name="customer"]`);
+    const phone = modal.querySelector(`[name="phone"]`);
+    const question = modal.querySelector(`[name="question"]`);
 
-  let isStorageSupport = true;
-  let storageName = ``;
-  let storagePhone = ``;
+    let isStorageSupport = true;
+    let storageName = ``;
+    let storagePhone = ``;
 
-  const switchScroll = () => {
-    page.classList.toggle(`.page--no-scroll`);
-  };
+    const switchScroll = () => {
+      page.classList.toggle(`page--no-scroll`);
+    };
 
-  const fillForm = () => {
-      if (storageName) {
-          name.value = storageName;
-      } else {
-          name.focus();
+    const fillForm = () => {
+        if (storageName) {
+            name.value = storageName;
+        } else {
+            name.focus();
+        }
+
+        if (storagePhone) {
+            phone.value = storagePhone;
+        }
+    };
+
+    const openModal = () => {
+      switchScroll();
+
+      if (modal) {
+        modal.classList.add(`modal--opened`);
+        document.addEventListener(`keydown`, onModalEscPress);
+        modalClose.addEventListener(`click`, onCloseCrossClick);
+        form.addEventListener(`submit`, onFormSubmit);
+        fillForm();
       }
+    };
 
-      if (storagePhone) {
-          phone.value = storagePhone;
+    const closeModal = () => {
+      switchScroll();
+
+      if (modal) {
+        modal.classList.remove(`modal--opened`);
+        document.removeEventListener(`keydown`, onModalEscPress);
+        modalClose.removeEventListener(`click`, onCloseCrossClick);
+        form.removeEventListener(`submit`, onFormSubmit);
       }
-  };
+    };
 
-  const openModal = () => {
-    switchScroll();
+    const onModalEscPress = (evt) => {
+      if (evt.key === `Escape`) {
+        closeModal();
+      }
+    };
 
-    if (modal) {
-      modal.classList.add(`modal--opened`);
-      document.addEventListener(`keydown`, onModalEscPress);
-      modalClose.addEventListener(`click`, onCloseCrossClick);
-      form.addEventListener(`submit`, onFormSubmit);
-      fillForm();
-    }
-  };
+    const onHeaderBtnClick = () => {
+      openModal();
+    };
 
-  const closeModal = () => {
-    switchScroll();
-
-    if (modal) {
-      modal.classList.remove(`modal--opened`);
-      document.removeEventListener(`keydown`, onModalEscPress);
-      modalClose.removeEventListener(`click`, onCloseCrossClick);
-      form.removeEventListener(`submit`, onFormSubmit);
-    }
-  };
-
-  const onModalEscPress = (evt) => {
-    if (evt.key === `Escape`) {
+    const onCloseCrossClick = () => {
       closeModal();
-    }
-  };
+    };
 
-  const onHeaderBtnClick = () => {
-    openModal();
-  };
-
-  const onCloseCrossClick = () => {
-    closeModal();
-  };
-
-  const onFormSubmit = (evt) => {
-    if (!name.value || !phone.value) {
-      evt.preventDefault();
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('name', name.value);
-        localStorage.setItem('phone', phone.value);
-        localStorage.setItem('question', question.value);
+    const onFormSubmit = (evt) => {
+      if (!name.value || !phone.value) {
+        evt.preventDefault();
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem('name', name.value);
+          localStorage.setItem('phone', phone.value);
+          localStorage.setItem('question', question.value);
+        }
       }
+    };
+
+    try {
+      storageName = localStorage.getItem(`name`);
+      storagePhone = localStorage.getItem(`phone`);
+    } catch (err) {
+      isStorageSupport = false;
     }
-  };
 
-  try {
-    storageName = localStorage.getItem(`name`);
-    storagePhone = localStorage.getItem(`phone`);
-  } catch (err) {
-    isStorageSupport = false;
-  }
-
-  if (headerBtn) {
-    headerBtn.addEventListener(`click`, onHeaderBtnClick);
-  }
+    if (headerBtn) {
+      headerBtn.addEventListener(`click`, onHeaderBtnClick);
+    }
+  });
 })();
 
 'use strict';
@@ -114,27 +116,36 @@
 'use strict';
 
 (() => {
-  const buttonNav = document.querySelector(`.button--nav`);
-  const buttonContacts = document.querySelector(`.button--contacts`);
+  const buttonNav = document.querySelector(`.js-nav`);
+  const buttonContacts = document.querySelector(`.js-contacts`);
 
   const nav = document.querySelector(`.nav`);
   const contacts = document.querySelector(`.footer-contacts`);
 
   const onButtonNavClick = () => {
     nav.classList.toggle(`nav--opened`);
-    buttonNav.classList.toggle(`button--accordeon-opened`);
+    buttonNav.classList.toggle(`js-nav--opened`);
+    contacts.classList.remove(`footer-contacts--opened`);
+    buttonContacts.classList.remove(`js-contacts--opened`);
   };
 
   const onbuttonContactsClick = () => {
     contacts.classList.toggle(`footer-contacts--opened`);
-    buttonContacts.classList.toggle(`button--accordeon-opened`);
+    buttonContacts.classList.toggle(`js-contacts--opened`);
+    nav.classList.remove(`nav--opened`);
+    buttonNav.classList.remove(`js-nav--opened`);
   };
 
-  if (buttonNav) {
-    buttonNav.addEventListener(`click`, onButtonNavClick);
-  }
+  document.addEventListener(`DOMContentLoaded`, () => {
+    buttonNav.classList.remove(`footer__heading--nojs`);
+    buttonContacts.classList.remove(`footer__heading--nojs`);
 
-  if (buttonContacts) {
-    buttonContacts.addEventListener(`click`, onbuttonContactsClick);
-  }
+    nav.classList.toggle(`nav--opened`);
+    contacts.classList.toggle(`footer-contacts--opened`);
+
+    if (buttonNav && buttonContacts) {
+      buttonNav.addEventListener(`click`, onButtonNavClick);
+      buttonContacts.addEventListener(`click`, onbuttonContactsClick);
+    }
+  });
 })();

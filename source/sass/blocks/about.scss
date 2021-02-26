@@ -146,5 +146,9 @@
 
       background-color: $about-btn-bg-hover;
     }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }
