@@ -37,7 +37,8 @@ gulp.task('javascript', function () {
     './node_modules/vanilla-text-mask/dist/vanillaTextMask.js',
     './source/js/modal.js',
     './source/js/validate.js',
-    './source/js/accordeon.js'
+    './source/js/accordeon.js',
+    './source/js/form.js'
   ])
       .pipe(concat('main.js'))
       .pipe(gulp.dest('build/js'));
