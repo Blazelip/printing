@@ -9,7 +9,7 @@
         vanillaTextMask.maskInput({
           inputElement: item,
           mask: PHONE_MASK,
-          showMask: true
+          showMask: false
         })
       });
     }

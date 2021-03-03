@@ -101,6 +101,7 @@
 
     background-color: rgba($feedback-input-bg, 0.1);
     border: none;
+    border-radius: 0;
     outline: none;
 
     @media #{$screen-only-desktop} {
@@ -168,6 +169,7 @@
 
   textarea {
     height: 154px;
+    resize: none;
 
     @media #{$screen-tablet} {
       height: 160px;

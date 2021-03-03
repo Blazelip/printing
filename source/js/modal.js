@@ -74,7 +74,6 @@
   const onFormSubmit = (evt) => {
     if (!name.value || !phone.value || phone.value === `+7(___)___-__-__`) {
       evt.preventDefault();
-      window.alert(`Пожалуйста, заполните все поля формы`);
     } else {
       if (isStorageSupport) {
         localStorage.setItem(`name`, name.value);

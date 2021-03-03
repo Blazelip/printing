@@ -2,6 +2,8 @@
   @media #{$screen-mobile} {
     display: none;
 
+    margin-bottom: 28px;
+
     &--nojs {
       display: block;
     }
